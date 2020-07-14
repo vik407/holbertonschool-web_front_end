@@ -49,7 +49,7 @@ function w3c(done) {
 }
 
 function watcher(done) {
-    watch('./src/**/*.pug', series(html, browserSyncReload, w3c));
+    watch('./src/**/*.pug', series(html, browserSyncReload));
     done();
 }
 
