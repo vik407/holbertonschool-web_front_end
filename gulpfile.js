@@ -1,6 +1,12 @@
 "use strict";
 
-const {series, parallel, watch, src, dest} = require('gulp');
+const {
+    series,
+    parallel,
+    watch,
+    src,
+    dest
+} = require('gulp');
 
 var pug = require("gulp-pug"),
     changed = require("gulp-changed"),
@@ -33,18 +39,16 @@ function html(done) {
 }
 
 function w3c(done) {
-    return src(htmlValidate)
-    .pipe(w3cjs({
-		verifyMessage: function(type, message) {
+    return src(htmlValidate).pipe(w3cjs({
+        verifyMessage: function (type, message) { // prevent logging error message
+            if (message.indexOf('Element') === 0) 
+                return true;
+            
 
-			// prevent logging error message
-			if(message.indexOf('Element') === 0) return true;
-			
-			// allow message to pass through
-			return false;
-		}
-	}))
-    .pipe(w3cjs.reporter());
+            // allow message to pass through
+            return false;
+        }
+    })).pipe(w3cjs.reporter());
     done();
 }
 
