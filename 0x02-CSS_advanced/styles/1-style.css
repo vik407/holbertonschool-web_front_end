@@ -1,1 +1,7 @@
-# Basic Style
+/* CSS Advanced Project - Holberton School - 1201@holbertonschool.com
+*/
+
+/* 1. Effortless transitions when scrolling */
+html{
+  scroll-behavior: smooth;
+}
