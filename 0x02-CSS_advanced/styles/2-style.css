@@ -1,13 +1,13 @@
-/* CSS Advanced Project - Holberton School - 1201@holbertonschool.com
-*/
-
 html {
   scroll-behavior: smooth;
 }
 
-body,
-[id] {
-  background-color: #161616;
+body {
+  color: #161616;
+}
+
+a {
+  color: #161616;
 }
 
 .visually-hidden {
@@ -15,9 +15,9 @@ body,
 }
 
 .card-category {
-  background-color: #d73953;
+  color: #d73953;
 }
 
 .section-tagline {
-  background-color: #d73953;
+  color: #d73953;
 }
