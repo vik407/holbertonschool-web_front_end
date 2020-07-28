@@ -1,0 +1,29 @@
+/* CSS Advanced Project - Holberton School - 1201@holbertonschool.com
+*/
+
+:root {
+  --color-primary: #d73953;
+  --color-black: #090909;
+  --color-white: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-dark-grey: #353535;
+  --text-color: var(--color-black);
+  scroll-behavior: smooth;
+}
+
+body,
+[id] {
+  background-color: #161616;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.card-category {
+  background-color: var(--color-primary);
+}
+
+.section-tagline {
+  background-color: var(--color-primary);
+}

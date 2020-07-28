@@ -1,22 +1,23 @@
 /* CSS Advanced Project - Holberton School - 1201@holbertonschool.com
 */
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body, [id]{
+body,
+[id] {
   background-color: #161616;
 }
 
-.visually-hidden{
+.visually-hidden {
   display: none;
 }
 
-.card-category{
-  background-color: #D73953;
+.card-category {
+  background-color: #d73953;
 }
 
-.section-tagline{
-  background-color: #D73953;
+.section-tagline {
+  background-color: #d73953;
 }
