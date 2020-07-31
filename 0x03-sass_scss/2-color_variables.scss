@@ -1,0 +1,12 @@
+/* Multiple color assignments, text, background using two sass variables */
+$color-text-var:#3D3D3D;
+$background-color-var:#6D6D6D;
+body {
+    color: $color-text-var;
+    background-color: $background-color-var; }
+  
+  p {
+    color: $color-text-var; }
+  
+  h2 {
+    background-color: $background-color-var; }
