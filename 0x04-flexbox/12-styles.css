@@ -367,6 +367,9 @@ ul.row {
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
   letter-spacing: var(--nav-item-letter-spacing);
+}
+
+.nav .nav-item + .nav-item {
   margin: var(--nav-item-margin);
 }
 
@@ -395,10 +398,6 @@ ul.row {
 .nav .nav-item:hover .nav-link::before {
   background-color: var(--color-primary);
   width: 100%;
-}
-
-.nav .nav-item + .nav-item {
-  margin: var(--nav-item-margin);
 }
 
 /* Header
@@ -533,9 +532,9 @@ ul.row {
   min-height: 50vh;
 }
 
-/* Section BLOG ============================= */
+/* Section Latest news ============================= */
 
-.section-blog .row {
+.section-latest-news .row {
   flex-direction: row-reverse;
 }
 
@@ -547,7 +546,7 @@ ul.row {
 
 /* Section ABOUT US ============================= */
 
-.section-about-us [class^="col-"] {
+.section-about-us [class*='col-'] {
   align-self: center;
 }
 
