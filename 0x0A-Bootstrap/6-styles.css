@@ -1,0 +1,27 @@
+/* Some thoughts about this task */
+/* 1 - This need to go on the custom.css file and not here */
+/* 2 - Cant change the weight score without alter the HTML file and declare an ID that overrides bootstrap definitions */
+/* Here comes the important rule */
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #bc1340 !important;
+    border-color: #bc1340 !important;
+}
+
+.btn-outline-primary {
+    border-color: #bc1340 !important;
+    color: #bc1340 !important;
+}
+
+a, a:hover, a:focus {
+    color: #e0003c !important;
+}
+
+.card, .card-header, .card-footer {
+    border-color: #e0003c;
+    border-radius: 1rem;
+}
+
+.text-muted {
+    color: #8c8c8c !important;
+}
