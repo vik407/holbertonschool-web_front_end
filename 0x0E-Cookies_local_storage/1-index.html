@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Login to the website</h1>
+  <div class="">
+    <input type="text" id="firstname" />
+    <input type="text" id="email" />
+    <button id="setCookies">Log me in</button>
+  </div>
+  <div>
+    <h1>Cookies</h1>
+    <button id="show">Show me the cookies</button>
+  </div>
+  <script>
+    document
+      .getElementById("setCookies")
+      .addEventListener("click", function (event) {
+        event.preventDefault()
+        setCookies()
+      })
+
+    document
+      .getElementById("show")
+      .addEventListener("click", function (event) {
+        event.preventDefault()
+        showCookies()
+      })
+
+    const setCookies = () => {
+      const firstname = document.getElementById("firstname").value
+      const email = document.getElementById("email").value
+      const d = new Date()
+      // 10 Days
+      d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000)
+      var expires = "expires=" + d.toUTCString()
+      document.cookie = `firstname=${firstname};${expires};path=/`
+      document.cookie = `email=${email};${expires};path=/`
+    }
+
+    const showCookies = () => {
+      const p = document.createElement("p")
+      p.innerHTML = document.cookie
+      document.querySelector("body").append(p)
+    }
+  </script>
+</body>
+
+</html>
