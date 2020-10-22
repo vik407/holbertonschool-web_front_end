@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Login to the website</h1>
+  <div class="">
+    <input type="text" id="firstname" />
+    <input type="text" id="email" />
+    <button id="setCookies">Log me in</button>
+  </div>
+  <div>
+    <h1>Cookies</h1>
+    <button id="show">Show me the cookies</button>
+  </div>
+  <script>
+    document
+      .getElementById("setCookies")
+      .addEventListener("click", function (event) {
+        event.preventDefault()
+        setCookies()
+      })
+
+    document
+      .getElementById("show")
+      .addEventListener("click", function (event) {
+        event.preventDefault()
+        showCookies()
+      })
+
+    const setCookies = () => {
+      const firstname = document.getElementById("firstname").value
+      const email = document.getElementById("email").value
+      const d = new Date()
+      d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000)
+      var expires = "expires=" + d.toUTCString()
+      document.cookie = `firstname=${firstname};${expires};path=/`
+      document.cookie = `email=${email};${expires};path=/`
+    }
+
+    const showCookies = () => {
+      const p = document.createElement("p")
+      // Change display
+      p.innerHTML = `Email: ${getCookie("email")} - Firstname: ${getCookie(
+        "firstname"
+      )}`
+      document.querySelector("body").append(p)
+    }
+
+    const getCookie = (name) => {
+      const n = name + "="
+      const decodedCookie = decodeURIComponent(document.cookie)
+      const ca = decodedCookie.split(";")
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i]
+        while (c.charAt(0) == " ") {
+          c = c.substring(1)
+        }
+        if (c.indexOf(n) == 0) {
+          return c.substring(n.length, c.length)
+        }
+      }
+      return ""
+    }
+  </script>
+</body>
+
+</html>
